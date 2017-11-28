@@ -16,13 +16,13 @@
             [status-im.chat.views.input.validation-messages :as validation-messages]
             [status-im.ui.components.animation :as anim]
             [status-im.ui.components.react :refer [view
-                                                animated-view
-                                                text
-                                                icon
-                                                scroll-view
-                                                text-input
-                                                touchable-highlight
-                                                dismiss-keyboard!]]
+                                                   animated-view
+                                                   text
+                                                   icon
+                                                   scroll-view
+                                                   text-input
+                                                   touchable-highlight
+                                                   dismiss-keyboard!]]
             [status-im.ui.components.icons.vector-icons :as vi]
             [status-im.i18n :as i18n]
             [status-im.utils.platform :as platform]))

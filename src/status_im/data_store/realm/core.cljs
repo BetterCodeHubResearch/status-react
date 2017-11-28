@@ -127,11 +127,15 @@
   (comp vec vals))
 
 (def reader (transit/reader :json))
+(def writer (transit/writer :json))
+
+(defn serialize [o] (transit/write writer o))
+(defn deserialize [o] (transit/read reader o))
 
 (defn- internal-convert [js-object]
   (->> js-object
        (.stringify js/JSON)
-       (transit/read reader)
+       deserialize
        walk/keywordize-keys))
 
 (defn js-object->clj
